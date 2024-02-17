@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlantic Express</title>
+
+    <!-- daisy ui and tailwind -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- style css add -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- primary color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-text-color': '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="container mx-auto">
+    <header class="hidden">
+        <!-- navbar -->
+
+        <div class="navbar bg-base-100 lg:justify-between  ">
+            <div class="navbar-start w-10 lg:hidden">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center ">
+                <a class="btn btn-ghost text-xl lg:text-4xl ">Atlantic Express</a>
+
+
+            </div>
+            <ul class="hidden lg:flex flex-row gap-10 ">
+                <li>Home</li>
+                <li>About</li>
+                <li>Destination</li>
+                <li>Search</li>
+            </ul>
+            <button class="flex flex-row gap-3 ml-20 lg:mr-5 bg-[#1DD1001A] py-2 px-6 rounded-md">
+                <h5 class="text-[#1DD100] text-lg font-bold">Bus</h5>
+                <img src="images/bus-icon.png" alt="">
+            </button>
+            <!-- <button class="flex flex-row gap-3 ml-20 bg-[#1DD1001A] py-2 px-6 rounded-md">
+                <h5 class="text-green-600 text-lg font-bold">Bus</h5>
+                <img src="images/bus-icon.png" alt="">
+            </button> -->
+        </div>
+
+
+        <!-- banner section -->
+
+        <section class="">
+            <div class="relative">
+                <img class="w-full h-[250px] lg:h-[600px] mx-auto" src="images/banner.png" alt="">
+                <div
+                    class="absolute w-[95%] mx-auto lg:w-[80%] top-10 left-3 space-y-2 lg:top-40 lg:left-40 text-center lg:space-y-8">
+                    <h1 class="text-3xl lg:text-6xl text-white font-bold">End-to-End Travel With <br>
+                        <span class="text-[#1DD100]">
+                            Atlantic Express
+                        </span>
+                    </h1>
+                    <p class="text-white">Atlantic Express brings the Most Comfortable and Affordable VIP Travel
+                        Packages 2024 with the <br> experienced in 3 years without any trouble.. </p>
+                    <button
+                        class="bg-[#1DD100] font-semibold py-2 px-2 lg:text-xl lg:font-semibold lg:py-3 lg:px-5 rounded-md">Buy
+                        Tickets</button>
+                </div>
+            </div>
+
+        </section>
+
+    </header>
+
+
+    <main>
+        <!-- best offers section -->
+        <section class="">
+            <h2>Best offers for you</h2>
+            <!-- coupon container -->
+            <div class="flex gap-5">
+                <!-- NEW15 coupon -->
+                <div class="bg-yellow-500 flex-1 h-[230px] rounded-xl  flex items-center">
+                    <div class="w-[60%] p-20">
+                        <h1 class="text-5xl font-semibold"> 15% OFF</h1>
+
+                        <h4 class="text-lg font-semibold">on your next purchase</h4>
+
+                        <p>use by January 2024</p>
+                    </div>
+                    <div>
+
+                    </div>
+                    <div class="w-[40%] flex flex-col items-center justify-center">
+                        <h1 class="text-4xl font-medium">NEW15</h1>
+                        <p>Coupon Code</p>
+                    </div>
+                </div>
+
+                <!-- Couple20 coupon -->
+                <div class="bg-violet-400 flex-1 h-[230px] rounded-xl">
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
