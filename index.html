@@ -102,34 +102,53 @@
 
     <main>
         <!-- best offers section -->
-        <section class="">
-            <h2>Best offers for you</h2>
+        <section class="mt-5 mt-5">
+            <h2 class="text-center text-3xl lg:text-4xl	font-semibold mb-10 ">Best offers for you</h2>
             <!-- coupon container -->
-            <div class="flex gap-5">
+            <div class="flex flex-col lg:flex-row gap-3 g:gap-5">
                 <!-- NEW15 coupon -->
-                <div class="bg-yellow-500 flex-1 h-[230px] rounded-xl  flex items-center">
-                    <div class="w-[60%] p-20">
-                        <h1 class="text-5xl font-semibold"> 15% OFF</h1>
+                <div class="bg-[#FFBF0F] flex-1  lg:h-[230px] rounded-xl  flex items-center relative">
+                    <!-- discount amounts -->
+                    <div class="w-[60%] p-10 lg:p-20 font-[Inter] lg:space-y-1">
+                        <h1 class="text-4xl lg:text-5xl font-bold"> 15% OFF</h1>
 
-                        <h4 class="text-lg font-semibold">on your next purchase</h4>
+                        <h4 class="lg:text-lg font-semibold">on your next purchase</h4>
 
                         <p>use by January 2024</p>
                     </div>
-                    <div>
-
-                    </div>
-                    <div class="w-[40%] flex flex-col items-center justify-center">
-                        <h1 class="text-4xl font-medium">NEW15</h1>
+                    <!-- code -->
+                    <div class="w-[40%] flex flex-col items-center justify-center space-y-1">
+                        <h1 class="text-3xl font-semibold">NEW15</h1>
                         <p>Coupon Code</p>
                     </div>
+
+                </div>
+                <!-- divider -->
+                <div>
+
                 </div>
 
                 <!-- Couple20 coupon -->
-                <div class="bg-violet-400 flex-1 h-[230px] rounded-xl">
-                    <div>
+                <div class="bg-[#F78C9C] flex-1 h-[230px] rounded-xl  flex items-center relative ">
+                    <!-- discount amounts -->
+                    <div class="w-[60%] p-10 lg:p-20 font-[Inter] lg:space-y-1">
+                        <h1 class="text-4xl lg:text-5xl font-bold">20% OFF</h1>
+                        <h4 class="w-[200px] lg:text-lg font-semibold">on your next purchase</h4>
 
+                        <p> use by January 2024</p>
+                    </div>
+                    <!-- code -->
+                    <div class=" space-y-1 text-center w-[40%]">
+                        <h1 class="text-3xl font-semibold">Couple 20</h1>
+                        <p>Coupon Codes</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <button class="text-[#1DD100] font-semibold border-solid border-2 border-[#1DD100] p-4 rounded-lg ">See
+                    All
+                    Offers</button>
             </div>
         </section>
 
