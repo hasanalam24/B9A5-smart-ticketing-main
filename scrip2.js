@@ -67,14 +67,14 @@ const applyBtn = document.getElementById('apply-btn').addEventListener('click', 
     }
 })
 
+document.getElementById('input-field').addEventListener('keyup', function (event) {
+    const inputField = event.target.value;
+    const applyBtn = document.getElementById('apply-btn')
+    if (inputField === "NEW15" || inputField === "Couple 20") {
+        applyBtn.removeAttribute('disabled');
+    }
 
-// const applyBtn = document.getElementById('input-field').addEventListener('keyup', function () {
-//     if (inputField === "NEW15" || inputField === "Couple 20") {
-//         applyBtn.removeAttribute('disabled');
-//     }
-
-//     else {
-//         applyBtn.setAttribute('disabled', true)
-//     }
-// }
-// )
+    else {
+        applyBtn.setAttribute('disabled', true)
+    }
+})
