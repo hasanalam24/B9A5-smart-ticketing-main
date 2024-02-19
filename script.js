@@ -1,3 +1,10 @@
+// Scroll 
+function goToExpressSection() {
+    const goLo = document.getElementById('atlantic-container');
+    goLo.scrollIntoView()
+}
+
+
 const cards = document.getElementsByClassName('cards');
 
 let count = 0;
@@ -27,9 +34,32 @@ for (const card of cards) {
 
         // console.log(availableSeats)
 
+        // seat info container
+        const titleContainer = document.getElementById('title-container');
+        const mainTitleContainer = document.getElementById('main-title-container');
+
+
+
+        //seat title add
+        const p = document.createElement('p')
+        p.innerText = card.innerText;
+        titleContainer.appendChild(p)
+        //seat class add
+        const p2 = document.createElement('p')
+        p2.innerText = 'Economoy';
+        titleContainer.appendChild(p2)
+        //seat price add
+        const p3 = document.createElement('p')
+        p3.innerText = 550;
+        titleContainer.appendChild(p3)
+
+
+
+
+
+
 
         const totalPrice = document.getElementById('total-price');
-
 
         const Price = count * 550;
         totalPrice.innerText = Price;
@@ -64,31 +94,55 @@ const applyBtn = document.getElementById('apply-btn').addEventListener('click', 
         const afterDiscountPrice = Price - discount;
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = afterDiscountPrice;
-        showElement('input-container')
+
+        const discountContainer = document.getElementById('discount-container');
+
+        // title add
+        const p = document.createElement('p')
+        p.innerText = 'Discount Price';
+        discountContainer.appendChild(p)
+
+        // discount add
+        const p2 = document.createElement('p')
+        p2.innerText = 'BDT -' + discount;
+        discountContainer.appendChild(p2)
+
+        hideElement('input-container')
     }
     else if (inputField === 'Couple 20') {
         const discount = Price * 20 / 100;
         const afterDiscountPrice = Price - discount;
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = afterDiscountPrice;
-        showElement('input-container')
+
+        const discountContainer = document.getElementById('discount-container');
+
+        // title add
+        const p = document.createElement('p')
+        p.innerText = 'Discount Price';
+        discountContainer.appendChild(p)
+
+        // discount add
+        const p2 = document.createElement('p')
+        p2.innerText = 'BDT -' + discount;
+        discountContainer.appendChild(p2)
+
+        hideElement('input-container')
     }
     else {
         alert('Invalid Coupon Code')
 
     }
 
-    // const p = document.createElement('p')
-    // p.innerText = titleCount + '. ' + title;
 
-    // titleCount++;
-    // titleContainer.appendChild(p)
 
 
 })
 
 
-function showElement(elementId) {
+function hideElement(elementId) {
     const element = document.getElementById(elementId)
     element.classList.add('hidden')
 }
+
+

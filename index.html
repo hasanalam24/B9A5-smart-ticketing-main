@@ -86,7 +86,7 @@
                     </h1>
                     <p class="text-white">Atlantic Express brings the Most Comfortable and Affordable VIP Travel
                         Packages 2024 with the <br> experienced in 3 years without any trouble.. </p>
-                    <button onclick="buyNow()"
+                    <button onclick="goToExpressSection()"
                         class="bg-[#1DD100] font-semibold py-2 px-2 lg:text-xl lg:font-semibold lg:py-3 lg:px-5 rounded-md">Buy
                         Tickets</button>
                 </div>
@@ -508,22 +508,33 @@
                             <p class="font-medium">Price</p>
                         </div>
                         <div class="border-b-2 border-[#0307124C] border-dashed mt-3"></div>
-                        <div id="title-container" class="">
+
+
+                        <div id="title-container" class="flex justify-between mt-3">
 
                         </div>
+
+
                         <div class="border-b-2 border-[#0307121A]  mt-3 mb-3"></div>
-                        <div class="flex justify-between mb-3">
-                            <p class="font-medium">Total Price</p>
+                        <!-- total price -->
+                        <div class="flex justify-between mb-3 font-medium">
+                            <p>Total Price</p>
                             <p>BDT <span id="total-price">0</span></p>
                         </div>
+                        <!-- discount price -->
+                        <div id="discount-container" class="flex justify-between mb-3 font-medium">
+
+                        </div>
+                        <!-- coupon input -->
                         <div id="input-container" class="relative">
                             <input id="input-field" class="p-4 w-full rounded-lg" type="text"
                                 placeholder="Have any copupon?">
                             <button id="apply-btn" class="btn absolute right-2 top-1 text-white bg-[#1DD100]"
                                 disabled>Apply</button>
                         </div>
-                        <div class="flex justify-between mt-3">
-                            <p class="font-medium">Grand Total</p>
+                        <!-- grand total price -->
+                        <div class="flex justify-between mt-3 font-medium">
+                            <p>Grand Total</p>
                             <p>BDT <span id="grand-total">0</span></p>
                         </div>
 
