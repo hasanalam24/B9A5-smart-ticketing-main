@@ -8,25 +8,18 @@ for (const card of cards) {
 
     card.addEventListener('click', function () {
 
-
-        // console.log(title)
-
-        const ticket = card.querySelector('span') /*.innerText;*/
-
         card.style.backgroundColor = '#1DD100'
         card.style.color = 'white'
 
         const seatCount = document.getElementById('seatCount');
-        // const convertSeatType = parseFloat(seatCount);
+
         count++
         seatCount.innerText = count;
 
 
 
         const availableSeats = document.getElementById('available-seats');
-        // console.log(availableSeats)
-        // const available = parseFloat(availableSeats)
-        // console.log(available)
+
         available--
         availableSeats.innerText = available;
 
@@ -35,7 +28,7 @@ for (const card of cards) {
 
         const totalPrice = document.getElementById('total-price');
 
-        // const convertPrice = parseFloat(totalPrice)
+
         const Price = count * 550;
         totalPrice.innerText = Price;
         console.log(Price)
@@ -68,6 +61,7 @@ const applyBtn = document.getElementById('apply-btn').addEventListener('click', 
     }
 })
 
+// Apply Button
 document.getElementById('input-field').addEventListener('keyup', function (event) {
     const inputField = event.target.value;
     const applyBtn = document.getElementById('apply-btn')
@@ -80,16 +74,3 @@ document.getElementById('input-field').addEventListener('keyup', function (event
     }
 })
 
-
-// next btn
-
-const nextBtn = document.getElementById('next-btn').addEventListener('click', function () {
-
-    showElement('success')
-
-})
-
-function showElement(elementId) {
-    const element = document.getElementById(elementId)
-    element.classList.remove('hidden')
-}
