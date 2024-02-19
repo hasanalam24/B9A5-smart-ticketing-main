@@ -8,6 +8,10 @@ for (const card of cards) {
 
     card.addEventListener('click', function () {
 
+        if (count >= 4) {
+            alert('Cannot purchase more than 4')
+            card.classList.setAttribute('disabled', true)
+        }
         card.style.backgroundColor = '#1DD100'
         card.style.color = 'white'
 
@@ -15,8 +19,6 @@ for (const card of cards) {
 
         count++
         seatCount.innerText = count;
-
-
 
         const availableSeats = document.getElementById('available-seats');
 
