@@ -1,7 +1,7 @@
 // Scroll 
 function goToExpressSection() {
-    const goLo = document.getElementById('atlantic-container');
-    goLo.scrollIntoView()
+    const goSection = document.getElementById('atlantic-container');
+    goSection.scrollIntoView()
 }
 
 
@@ -144,4 +144,14 @@ function hideElement(elementId) {
     element.classList.add('hidden')
 }
 
-
+// document.getElementById('phone-number').addEventListener('keyup', function (event) {
+//     const text = event.target.value;
+//     const nextBtn = document.getElementById('next-btn');
+//     // console.log(text)
+//     if (text === '01') {
+//         nextBtn.removeAttribute('disabled')
+//     }
+//     else {
+//         nextBtn.setAttribute('disabled', true)
+//     }
+// })
