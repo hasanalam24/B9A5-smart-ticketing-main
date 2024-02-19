@@ -42,7 +42,8 @@ for (const card of cards) {
         if (count >= 1) {
             card.setAttribute("disabled", true);
         }
-
+        const grandTotal = document.getElementById('grand-total');
+        grandTotal.innerText = Price
 
 
     })
