@@ -8,8 +8,6 @@ function goToExpressSection() {
 const cards = document.getElementsByClassName('cards');
 
 let count = 0;
-let available = 32;
-
 
 for (const card of cards) {
 
@@ -23,25 +21,23 @@ for (const card of cards) {
         card.style.color = 'white'
 
         const seatCount = document.getElementById('seatCount');
-
         count++
         seatCount.innerText = count;
 
+        // available seats
         const availableSeats = document.getElementById('available-seats');
 
-        available--
-        availableSeats.innerText = available;
+        const totalCurrent = availableSeats.innerText;
+        const currentSeats = parseInt(totalCurrent)
+        const availableCurrent = currentSeats - 1;
+        availableSeats.innerText = availableCurrent;
 
-        // console.log(availableSeats)
 
         // seat info container
         const titleContainer = document.getElementById('title-container');
         const seat = document.getElementById('seat');
         const class2 = document.getElementById('class-2');
         const price3 = document.getElementById('price-3');
-
-        // const mainTitleContainer = document.getElementById('main-title-container');
-
 
 
         //seat title add
@@ -61,11 +57,6 @@ for (const card of cards) {
         p3.innerText = 550;
         price3.appendChild(p3)
         titleContainer.appendChild(price3)
-
-
-
-
-
 
 
         const totalPrice = document.getElementById('total-price');
