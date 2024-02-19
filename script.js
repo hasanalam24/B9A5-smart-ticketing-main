@@ -85,6 +85,8 @@ for (const card of cards) {
 }
 
 
+
+
 const applyBtn = document.getElementById('apply-btn').addEventListener('click', function () {
 
     const Price = count * 550;
@@ -133,9 +135,6 @@ const applyBtn = document.getElementById('apply-btn').addEventListener('click', 
         alert('Invalid Coupon Code')
 
     }
-
-
-
 
 })
 
