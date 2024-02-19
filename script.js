@@ -66,6 +66,10 @@ for (const card of cards) {
         console.log(Price)
         if (count >= 1) {
             card.setAttribute("disabled", true);
+            const nextBtn = document.getElementById('next-btn');
+
+            nextBtn.removeAttribute('disabled')
+
         }
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = Price
@@ -80,6 +84,7 @@ for (const card of cards) {
         else {
             applyBtn.setAttribute('disabled', true);
         }
+        // NEXT BUTTON
 
     })
 }
@@ -144,14 +149,4 @@ function hideElement(elementId) {
     element.classList.add('hidden')
 }
 
-// document.getElementById('phone-number').addEventListener('keyup', function (event) {
-//     const text = event.target.value;
-//     const nextBtn = document.getElementById('next-btn');
-//     // console.log(text)
-//     if (text === '01') {
-//         nextBtn.removeAttribute('disabled')
-//     }
-//     else {
-//         nextBtn.setAttribute('disabled', true)
-//     }
-// })
+
