@@ -9,8 +9,8 @@ for (const card of cards) {
     card.addEventListener('click', function () {
 
         if (count >= 4) {
-            alert('Cannot purchase more than 4')
-            card.classList.setAttribute('disabled', true)
+            alert('Cannot purchase more than 4');
+            card.classList.setAttribute('disabled', true);
         }
         card.style.backgroundColor = '#1DD100'
         card.style.color = 'white'
@@ -40,6 +40,16 @@ for (const card of cards) {
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = Price
 
+        // apply btn enabled/disabled
+        const applyBtn = document.getElementById('apply-btn')
+        if (count === 4) {
+            applyBtn.removeAttribute('disabled');
+
+        }
+
+        else {
+            applyBtn.setAttribute('disabled', true);
+        }
 
     })
 }
@@ -54,25 +64,31 @@ const applyBtn = document.getElementById('apply-btn').addEventListener('click', 
         const afterDiscountPrice = Price - discount;
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = afterDiscountPrice;
+        showElement('input-container')
     }
-    if (inputField === 'Couple 20') {
+    else if (inputField === 'Couple 20') {
         const discount = Price * 20 / 100;
         const afterDiscountPrice = Price - discount;
         const grandTotal = document.getElementById('grand-total');
         grandTotal.innerText = afterDiscountPrice;
+        showElement('input-container')
     }
-})
-
-// Apply Button
-document.getElementById('input-field').addEventListener('keyup', function (event) {
-    const inputField = event.target.value;
-    const applyBtn = document.getElementById('apply-btn')
-    if (inputField === "NEW15" || inputField === "Couple 20") {
-        applyBtn.removeAttribute('disabled');
-    }
-
     else {
-        applyBtn.setAttribute('disabled', true)
+        alert('Invalid Coupon Code')
+
     }
+
+    // const p = document.createElement('p')
+    // p.innerText = titleCount + '. ' + title;
+
+    // titleCount++;
+    // titleContainer.appendChild(p)
+
+
 })
 
+
+function showElement(elementId) {
+    const element = document.getElementById(elementId)
+    element.classList.add('hidden')
+}
